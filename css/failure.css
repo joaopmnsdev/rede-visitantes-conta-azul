@@ -53,3 +53,21 @@ body {
 .error-container button:hover {
     background: #7b56ff;
 }
+
+#tentarNovamente {
+    display: inline-block;
+    color: #ffffff; /* Texto branco */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: center; /* Centralização do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    font-family: Arial, sans-serif; /* Fonte consistente */
+    cursor: pointer; /* Muda o cursor ao passar por cima */
+  }
+  
+  #tentarNovamente:hover {
+    background-color: #2c7ab9; /* Azul mais escuro ao passar o mouse */
+  }
+  
