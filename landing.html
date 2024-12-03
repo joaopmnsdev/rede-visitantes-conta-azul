@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/splash_template.css" rel="stylesheet">
+  
+  <title>Login to WiFi</title>
+</head>
+          
+    
+                            <body style='background:#FFFFFFFF none no-repeat center center scroll;' data-sj=''>
+    <!-- splash content -->
+    <!-- landing page content -->
+                                                                                                  <div class="container" id="landing" data-body-style="background:#FFFFFFFF none no-repeat center center scroll;" style="display:none">
+                              <div class="section rowBlock" style="min-height: 80px; background: rgb(25, 130, 227); float: left;">
+                            
+                  
+        <div class="col_one ">
+                                  <div class="sw_height " style="min-height:80px;">
+            <div style="text-align: center; padding: 20px 0px;"><font style="background-color: #1982E3;line-height:32px;" color="#ffffff" size="6">BEM VINDO A CONTA AZUL!​</font></div>
+          </div>
+                    </div>
+        </div>
+ 
+                                  <div class="section rowBlock" style="min-height: 350px; background: transparent; float: left;">
+                            
+                  
+        <div class="col_one ">
+                                          <div class="form_id">
+          <form class='registrationForm' action="/guest/register/register_user" method="POST">
+                      <header><h1>Registre-se para o WIFI</h1></header>
+            <div class="guRegBasic">
+              <div class='formError form-group' style='display:none;'><div></div></div>
+                                              <input type="hidden" name="f_mobilecheck" value="on">
+                                              
+                                                                  <div class='form-group'>
+                    <label for='f_name_id' class='upper-case'>NOME<span class='redstar'></span></label>
+                    <input type='text' class='form-control' name='f_name' id='f_name_id' placeholder='Nome Completo' data-required='false' data-error-message=''>
+                    <div class='error' style='display: none;'></div>
+                  </div>
+                                                
+                                
+                                                                                              
+                                                
+                                
+                                                                                              
+                                                                  
+                  
+                                      <div class='form-group'>
+                      <label for='mobile_number_id' class='upper-case mobile'>Telefone<span class='redstar'>*</span></label>
+                      <input type='mobile' class='form-control' name='f_mobile' id='mobile_number_id' placeholder='Insira o código 55 Ex: 5547999999999' data-required='true' data-error-message='Telefone inválido'>
+                      <div class='error' style='display: none;'></div>
+                    </div>
+                
+                                
+                    <script>
+                      function add55(elem) {
+                          var val = elem.value;
+                          if (!val.match(/^55/)) {
+                              elem.value = "55" + val;
+                          }
+                      }
+                    </script>                                                                          
+                                                
+                                
+                                                                                              
+                                                
+                                
+                                                                                              
+                                                
+                                
+                                                                                              
+                                                
+                                
+                                                                                              
+                                                
+                                
+                                                                                              
+                                                
+                                
+                                                                                              
+                                                
+                                
+                                                    <div class='form-check'>
+                      <input class="form-check-input" type="checkbox" name="f_disclaimer" id="f_disclaimer_id" data-required='true' data-error-message='Agreement is required!'>
+                      <label class="form-check-label" for="f_disclaimer_id">Ao clicar em Registrar, você concorda com os termos deste Termo de Responsabilidade</label>
+                      <div class='disclaimer error' id='f_disclaimer_error' style='display: none;'></div>
+                    </div>
+                                                                              
+                                                
+                                
+                                                                                              
+            </div>
+            <div class='formError formSubmitStatus' style='display:none;'></div>
+                        <div class="form-row">
+              <div class="col"><a class='btn btn-primary submit' href='#' role='button'>Registrar</a></div>
+            </div>
+            <div class="form-row">
+              <div class="col"><a class='btn btn-primary logButton' href='#' role='button'>Fazer Login</a></div>
+            </div>
+                                </form>
+        </div>
+ 
+                    </div>
+        </div>
+ 
+                                      </div>
+                                                                                                  <div class="container" id="login" data-body-style="background:#FFFFFFFF none no-repeat center center scroll;" >
+                              <div class="section rowBlock" style="min-height: 80px; background: rgb(25, 130, 227); float: left;">
+                            
+                  
+        <div class="col_one ">
+                                  <div class="sw_height " style="min-height:80px;">
+            <div style="text-align: center; padding: 20px 0px;"><font style="background-color: #1982E3;line-height:32px;" color="#ffffff" size="6">Conta Azul</font></div>
+          </div>
+                    </div>
+        </div>
+ 
+                                  <div class="section rowBlock" style="min-height: 297px; background: transparent; float: left;">
+                            
+                  
+        <div class="col_one ">
+                                          <form class='loginForm' action="/cgi-bin/hslogin.cgi" method="POST">
+          <header><h3>Portal do Visitante</h3></header>
+          <div class='form_main'>
+            <div class="form-group">
+              <div class='formError form_right' style='display:none;'></div>
+            </div>
+            <div class="form-group">
+              <label for='f_user_id' class='upper-case'>USUARIO<span class='redstar'>*</span></label>
+              <input type="text" class="form-control" name="f_user" id="f_user_id" placeholder="Telefone" data-required='true' data-error-message='Please provide the Username'>
+              <div class='error' style='display: none;'></div>
+            </div>
+            <div class="form-group">
+              <label for="f_pass_id" class='upper-case'>SENHA<span class='redstar'>*</span></label>
+              <input type="text" autocomplete="one-time-code" class="form-control" name="f_pass" id="f_pass_id" placeholder="Código SMS" data-required='true' data-error-message='Please provide the passcode'>
+              <div class='error' style='display: none;'></div>
+            </div>
+                                      <div class="form-row">
+              <!-- <div class="col"><input class='btn btn-primary' type='submit' value='Sign In'/></div> -->
+              <div class="col"><a class='btn btn-primary submit' href='#' role='button' class="otp-sign-in">Entrar Agora</a></div>
+            </div>
+            <div class="form-row">
+              <div class="col"><a class='btn btn-primary forgot' href='#' role='button'>Esqueci a senha</a></div>
+              <div class="col"><a class='btn btn-primary regButton' href='#' role='button'>Registrar</a></div>
+            </div>
+                                    </div>
+        </form>
+       
+ 
+                    </div>
+        </div>
+ 
+                                  <div class="section rowBlock" style="min-height: 32px; background: transparent; float: left;">
+                            
+                  
+        <div class="col_one ">
+                                          <div class="sw_height " style="height:32px;white-space: nowrap;text-align: center">
+                        <span class="img_ver_main" style="vertical-align:middle"></span>
+            <span class="terms_text_user tnc-link" data-toggle="modal" data-target="#tsModal" style="color:#000000;font-size:13">Termos e Condições</span>
+                        <span class="separator_user" style="padding:5px;">|</span>
+            <span class="terms_text_user pp-link" data-toggle="modal" data-target="#ppModal"  style="color:#000000;font-size:13">Política de Privacidade</span>
+                    </div>
+                    </div>
+        </div>
+ 
+                                      </div>
+                      <!-- landing page content end -->
+            <!-- Terms of service Modal -->
+      <div class="modal fade" id="tsModal" tabindex="-1" role="dialog" aria-labelledby="tsModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="tsModalLabel">Termos e Condições</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id='terms-of-service'>
+                  <span id="docs-internal-guid-ab2e671b-7fff-4e47-dcb5-86ded66235b6"><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">Você é responsável por manter a confidencialidade da senha e de todas as atividades que ocorrem sob seu nome de usuário e senha. A Conta Azul oferece o acesso a internet para atividades como uso ativo de e-mail, mensagens instantâneas, navegação na World Wide Web e acesso a intranets corporativas. Não são permitidas transferências de dados de grandes volumes, especialmente transferências sustentadas de dados de grandes volumes. É proibido hospedar um servidor web ou qualquer outro servidor usando nosso serviço. Tentar acessar a conta de outra pessoa, enviar e-mails em massa não solicitados, coletar dados pessoais de outras pessoas sem o seu conhecimento e interferir com outros usuários da rede são todos proibidos. A Conta Azul se reserva o direito de suspender o serviço se tiver razões para acreditar que seu uso do serviço é injustificadamente excessivo ou serve à atividades criminosas ou ilegais. Você não tem o direito de revender este serviço a terceiros. A Conta Azul se reserva o direito de rever, corrigir ou modificar os Termos e Condições, outras políticas e acordos e aspectos do próprio serviço. O aviso de qualquer revisão, correção ou modificação será publicado no site da Conta Azul e entrará em vigor para os usuários 30 dias após a publicação.</span></p><br><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="background-color: transparent; font-family: Arial, sans-serif; font-size: 11pt; white-space-collapse: preserve;">Seja bem vindo a Conta Azul</span><br></p><div><span style="font-size: 11pt; font-family: Arial, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><br></span></div></span>
+                </div>
+              </div>
+          </div>
+      </div>
+              <!-- Privacy Policy Modal -->
+      <div class="modal fade" id="ppModal" tabindex="-1" role="dialog" aria-labelledby="ppModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="ppModalLabel">Política de Privacidade</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id='privacy-policy'>
+                  <div style=""><div style=""><font face="Arial, sans-serif"><span style="font-size: 14.6667px; white-space-collapse: preserve;">Essa rede wireless é fornecida para uso exclusivo de visitantes à Conta Azul. Ao acessar esta rede, podemos coletar informações como seu endereço IP, nome de usuário e e-mail para fornecer acesso à rede e monitorar seu uso. Suas informações não serão compartilhadas com terceiros sem o seu consentimento. Implementamos medidas de segurança para proteger suas informações contra acesso não autorizado.</span></font></div><div style=""><font face="Arial, sans-serif"><span style="font-size: 14.6667px; white-space-collapse: preserve;"><br></span></font></div><div style=""><font face="Arial, sans-serif"><span style="font-size: 14.6667px; white-space-collapse: preserve;">Para fins de cumprimento com a legislação de proteção de dados pessoais, mediante o acesso a redes sem fio, formaliza-se o consentimento para coleta de dados pessoais. Esses dados serão desativados assim que expirar o período de visita e poderão ser excluídos por meio de solicitação do colaborador.</span></font></div><div style="color: rgb(0, 0, 0); font-family: NotoSans, sans-serif; font-size: 13px;"><br></div><div style="font-size: 13px; font-family: NotoSans, sans-serif; color: rgb(0, 0, 0);"><span id="docs-internal-guid-d77169dc-7fff-6aaa-1935-d3b4fa8d3191"><span style="font-size: 11pt; font-family: Arial, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">Seja bem vindo a Conta Azul</span></span><br></div></div>
+                </div>
+              </div>
+          </div>
+      </div>
+          <script src= "js/jquery.min.js"></script>
+  <script src= "js/bootstrap.bundle.min.js"></script>
+  <script src= "js/eg.min.js"></script>
+    <script type='text/javascript'>
+  
+    $(function(){
+      $('input[name=f_emailcheck], input[name=f_mobilecheck]').change(function(){
+        var form = $(this).parents('form'),
+          em_ck  = form.find('input[name=f_emailcheck]'),
+          mob_ck = form.find('input[name=f_mobilecheck]'),
+          em_rs  = form.find('label.email span.redstar'),
+          mob_rs = form.find('label.mobile span.redstar'),
+          email  = form.find('input[name=f_email]'),
+          mobile = form.find('input[name=f_mobile]');
+        if(!em_ck.is(":checked")&&!mob_ck.is(":checked")){
+          if ($(this).prop('name')=='f_emailcheck') mob_ck.prop('checked', true);
+          else em_ck.prop('checked', true);
+        }
+        if (em_ck.is(":checked")) { em_rs.text("*"); email.prop("required"); }
+        else { em_rs.text(""); email.removeProp("required"); }
+        if (mob_ck.is(":checked")) { mob_rs.text("*"); mobile.prop("required"); }
+        else { mob_rs.text(""); mobile.removeProp("required"); }
+      });
+    });
+        $('.regButton').on('click', function(event) {
+      event.preventDefault();
+      var lan = $('#landing'), log = $('#login');
+      if (log) { log.hide(); }
+      if (lan) { $('body').attr('style', lan.attr('data-body-style')); lan.show();}
+    });
+    $('.logButton').on('click', function(event) {
+      event.preventDefault();
+      var lan = $('#landing'), log = $('#login');
+      if (lan) { lan.hide(); }
+      if (log) { $('body').attr('style', log.attr('data-body-style')); log.show();}
+    });
+    $('.sponsorLogin').on('click', function(event) {
+      event.preventDefault();
+      $('#employee-registration').hide();
+      $('#vendor-registration').hide();
+      $('#guest-registration').hide();
+      $('#login').show();
+    });
+    $('.sponsor-emp').on('click', function(event) {
+      event.preventDefault();
+      $('#login').hide();
+      $('#vendor-registration').hide();
+      $('#guest-registration').hide();
+      $('#employee-registration').show();
+    });
+    $('.sponsor-vnd').on('click', function(event) {
+      event.preventDefault();
+      $('#login').hide();
+      $('#employee-registration').hide();
+      $('#guest-registration').hide();
+      $('#vendor-registration').show();
+    });
+    $('.sponsor-gst').on('click', function(event) {
+      event.preventDefault();
+      $('#login').hide();
+      $('#employee-registration').hide();
+      $('#vendor-registration').hide();
+      $('#guest-registration').show();
+    });
+            $('.tryButton').on('click', function(event) {
+      event.preventDefault();
+      // This logic wont work for HiveAP as clientMAC will not be present in failure page redirection
+      // location.replace(location.href.replace('landing.html', 'landing.html')); 
+      location.href = "http://1.2.3.4"; // Force AP's Captive portal redirection to kick in
+    });
+    $('.outButton').on('click', function(event) {
+      event.preventDefault();
+      location.replace(getLogoutURL());
+    });
+    $('.ancButton').on('click', function(event) {
+      event.preventDefault();
+      var form = $('<form method="POST"></form>'), urlParams = URLSearchToFormFields();
+      form.prepend(urlParams.formItems);
+      form.append(urlParams.hsServer); form.append(urlParams.currTime); form.append(urlParams.qv);
+      form.append('<input name="f_register" type="hidden" value="Register">');
+      var formAction = getFormAction('reg');
+      form.attr('action', location.origin+ '/guest/register/accept_connect' + location.search);
+      form.attr('method', formAction.method);
+      $.ajax({
+        type: form.attr('method'),
+        url: form.attr('action'),
+        data: form.serialize()
+      }).done(function (data) {
+        $('.formError, .formSubmitStatus').text(data.message).show();
+        if(data.macAuthRedirect) {
+          setTimeout(function(){
+          var macAuthForm = $('<form></form>');
+            $(document.body).append(macAuthForm);
+            var clientMac = $.urlParam('clientMac').replace(/-/g, '').toLowerCase();
+            macAuthForm.append(URLSearchToFormFields())
+            macAuthForm.append('<input type="hidden" name="username" value="' + clientMac + '">')
+            macAuthForm.append('<input type="hidden" name="password" value="' + clientMac + '">')
+            macAuthForm.append('<input type="hidden" name="Submit2" value="Submit">');
+            macAuthForm.append('<input type="hidden" name="autherr" value="0">');
+            macAuthForm.append('<input type="hidden" name="url" value="https://extremenetworks.com">');
+            macAuthForm.append('<input type="hidden" name="ssid" value="' + $.urlParam('network') + '">');
+            macAuthForm.attr('action', $.urlParam('redirecturl'));
+            macAuthForm.attr('method', 'POST');
+            macAuthForm.submit();
+          }, 500);          
+        }
+      }).fail(function (data) {
+        $('.formError, .formSubmitStatus').text('Server Error. Please try after sometime').show();
+      });
+    });
+    $('.cntButton').on('click', function(event) {
+      event.preventDefault();
+      var form = $('<form method="POST"></form>'), urlParams = URLSearchToFormFields();
+      form.prepend(urlParams.formItems);
+      $('<input name="f_agree">').val('acknowledgement').appendTo(form);
+      form.append(urlParams.hsServer); form.append(urlParams.currTime); form.append(urlParams.qv);
+      var formAction = getFormAction('log');
+      form.attr('action', location.origin+ '/guest/register/accept_connect' + location.search);
+      form.attr('method', formAction.method);
+      $.ajax({
+        type: form.attr('method'),
+        url: form.attr('action'),
+        data: form.serialize()
+      }).done(function (data) {
+        $('.formError, .formSubmitStatus').text(data.message).show();
+        if(data.macAuthRedirect) {
+          setTimeout(function(){
+          var macAuthForm = $('<form></form>');
+            $(document.body).append(macAuthForm);
+            var clientMac = $.urlParam('clientMac').replace(/-/g, '').toLowerCase();
+            macAuthForm.append(URLSearchToFormFields())
+            macAuthForm.append('<input type="hidden" name="username" value="' + clientMac + '">')
+            macAuthForm.append('<input type="hidden" name="password" value="' + clientMac + '">')
+            macAuthForm.append('<input type="hidden" name="Submit2" value="Submit">');
+            macAuthForm.append('<input type="hidden" name="autherr" value="0">');
+            macAuthForm.append('<input type="hidden" name="url" value="https://extremenetworks.com">');
+            macAuthForm.append('<input type="hidden" name="ssid" value="' + $.urlParam('network') + '">');
+            macAuthForm.attr('action', $.urlParam('redirecturl'));
+            macAuthForm.attr('method', 'POST');
+            macAuthForm.submit();
+          }, 500);          
+        }
+      }).fail(function (data) {
+        $('.formError, .formSubmitStatus').text('Server Error. Please try after sometime').show();
+      });
+    });
+    $.urlParam = function (name) {
+      var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+      if (results == null) {
+        return null;
+      }
+      else {
+        return decodeURI(results[1]) || 0;
+      }
+    }
+    $('form.registrationForm a.submit').on('click', function(event) {
+      event.preventDefault();
+      if (!isRegFormValid($(this).parents('form'))) return false;
+      var path = location.pathname.split('/'), form = $(this).parents('form'), urlParams = URLSearchToFormFields();
+      if (form.find('.select_dob_day').val()) {
+        var day = form.find('.select_dob_day').val(), month = form.find('.select_dob_month').val(), year = form.find('.select_dob_year').val();
+        $('form.registrationForm input[name=f_dob]').remove()
+        form.append('<input name="f_dob" type="hidden" value="'+year+'-'+month+'-'+day+'">');
+      }
+      $('form.registrationForm input[name=cpname]').remove()
+      form.prepend(urlParams.formItems + '<input type="hidden" name="cpname" value="' + path[path.length - 2] + '">');
+      $('form.registrationForm input[name=owner_id]').remove()
+      form.prepend(urlParams.formItems + '<input type="hidden" name="owner_id" value="' + path[path.length - 3] + '">');
+      form.append(urlParams.hsServer); form.append(urlParams.currTime); form.append(urlParams.qv);
+      form.append('<input name="f_register" type="hidden" value="Register">');
+      var formAction = getFormAction('reg');
+      form.attr('action', location.origin+ '/guest/register/register_user' + location.search);
+      form.attr('method', formAction.method);
+
+      $.ajax({
+        type: form.attr('method'),
+        url: form.attr('action'),
+        data: form.serialize()
+      }).done(function (data) {
+        form.find('.formError, .formSubmitStatus').text(data.message).show();
+        if(data.macAuthRedirect) {
+          setTimeout(function(){
+          var macAuthForm = $('<form></form>');
+            $(document.body).append(macAuthForm);
+            var clientMac = $.urlParam('clientMac').replace(/-/g, '').toLowerCase();
+            macAuthForm.append(URLSearchToFormFields())
+            macAuthForm.append('<input type="hidden" name="username" value="' + clientMac + '">')
+            macAuthForm.append('<input type="hidden" name="password" value="' + clientMac + '">')
+            macAuthForm.append('<input type="hidden" name="Submit2" value="Submit">');
+            macAuthForm.append('<input type="hidden" name="autherr" value="0">');
+            macAuthForm.append('<input type="hidden" name="url" value="https://extremenetworks.com">');
+            macAuthForm.append('<input type="hidden" name="ssid" value="' + $.urlParam('network') + '">');
+            macAuthForm.attr('action', $.urlParam('redirecturl'));
+            macAuthForm.attr('method', 'POST');
+            macAuthForm.submit();
+          }, 500);          
+        } else {
+          if(data.success) {
+            form.find('.formError, .formSubmitStatus').text(data.message || 'Successfully registered!').show();
+          } else {
+            form.find('.formError, .formSubmitStatus').text(data.message || 'Registration failed. Please contact administrator.').show();
+          }
+        }
+      }).fail(function (data) {
+        form.find('.formError, .formSubmitStatus').text('Server Error. Please try after sometime').show();
+      });
+    });
+    $('form.loginForm a.submit').on('click', function(event) {
+      event.preventDefault();
+      var form = $(this).parents('form'), formError = form.find('.formError'), urlParams = URLSearchToFormFields();
+      form.attr('action', location.origin+ '/guest/register/deviceFingerPrint' + location.search);
+      form.attr('method', 'POST');
+      $.ajax({
+        type: form.attr('method'),
+        url: form.attr('action'),
+        data: form.serialize()
+      }).done (function (data) {
+          if(data.success) {
+            var username = $('#f_user_id').val();
+            var password = $('#f_pass_id').val();
+            var authForm = $('<form></form>');
+            $(document.body).append(authForm);
+            authForm.append(URLSearchToFormFields())
+            authForm.append('<input type="hidden" name="username" value="' + username.toLowerCase() + '">')
+            authForm.append('<input type="hidden" name="password" value="' + password + '">')
+            authForm.append('<input type="hidden" name="Submit2" value="Submit">');
+            authForm.append('<input type="hidden" name="autherr" value="0">');
+            authForm.append('<input type="hidden" name="url" value="https://extremenetworks.com">');
+            authForm.append('<input type="hidden" name="ssid" value="'+ $.urlParam('network')+'">');
+            authForm.attr('action', $.urlParam('redirecturl'));
+            authForm.attr('method', 'POST');
+            authForm.submit();
+            return false;
+          } else {
+            formError.text(data.message).show();
+          }
+        });
+    });
+    $('form.loginForm a.forgot').on('click', function(event) {
+      event.preventDefault();
+      var form = $(this).parents('form'), formError = form.find('.formError'), urlParams = URLSearchToFormFields();
+      if ($('#f_user_id').val() == "") {
+        formError.text("Insira um usuário válido").show();
+      } else {
+        $('form.registrationForm').remove()
+        var form = $('<form class="forgotPassword" method="POST"></form>'), urlParams = URLSearchToFormFields();
+        form.prepend(urlParams.formItems);
+        var username = $('#f_user_id').val();
+        form.append('<input name="username" type="hidden" value="'+ username.toLowerCase() +'">');
+        form.attr('action', location.origin+ '/guest/register/forgot' + location.search);
+        form.attr('method', 'POST');
+        $.ajax({
+          type: form.attr('method'),
+          url: form.attr('action'),
+          data: form.serialize()
+        }).done(function (data) {
+          if(data.success) {
+            formError.text("Your password will be reset!" + '\n' + "Please check your email/sms for new passcode.").show();
+          } else {
+            formError.text(data.message).show();
+          }
+        });
+      }
+    });
+    $('form').on('reset', function(event) { $(this).find('.formError, .error').text('').hide(); });
+    $('.social-buttons').on('click', function(event){
+      event.preventDefault();
+      var social = $(this).data('connect');
+      social = social=='facebook_checkin' ? 'facebook&checkin' : social;
+      redirectTo(social);
+    });
+      $('form input:reset').on('click', function(event) { $('form .formError, form .error').text('').hide(); });
+    function isRegFormValid(form) {
+      var has_error = false;
+      var EMAIL_REGEXP = /[A-Za-z0-9!#$%&'*+=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?/g;
+      form.find('.formError, .error').text('').hide();
+      form.find('.email-go').each(function(i, el){
+        var input = $(el).find('input'), error = $(el).find('.error'), value = input.val();
+	      input.val(value.toLowerCase());
+        error.hide();
+        if (value.length && !EMAIL_REGEXP.test(value)) {
+          error.text("Invalid e-mail address").show();
+          has_error = true;
+        }
+      });
+      form.find('.form-group').each(function(i, el){
+        var input = $(el).find('input'),
+          error = $(el).find('.error'),
+          value = input.val();
+
+        if ($(el).find('.redstar').text()=='') {    //sponsor validation
+          if (input.attr('type')=='sponsor_email') {
+           var SPONSOR_EMAIL_REGEX = /[A-Za-z0-9!#$%&'*+=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?/g;
+            if (value.length && !SPONSOR_EMAIL_REGEX.test(value)) {
+                error.text("Invalid e-mail address").show();
+                has_error = true;
+            }
+          }
+        }
+
+        if ($(el).find('.redstar').text()=='*') {
+          if (input.attr('type')=='email') {
+            if (!EMAIL_REGEXP.test(value)) {
+                error.text("Invalid e-mail address").show();
+                has_error = true;
+            }
+            input.val(value.toLowerCase());
+          } else if (input.attr('type')=='sponsor_email') {
+            var SPONSOR_EMAIL_REGEX = /^[A-Za-z0-9!#$%&'*+=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?$/;
+            if (!SPONSOR_EMAIL_REGEX.test(value)) {
+                error.text("Invalid e-mail address").show();
+                has_error = true;
+            }
+            input.val(value.toLowerCase());
+          } else if (input.attr('type')=='mobile') {
+            var MOBILE_REGEXP = /^([0-9]{13})$/;
+            if (!MOBILE_REGEXP.test(value)) {
+                error.text("Favor inserir no formato: 5547999999999").show();
+                has_error = true;
+            }
+          } else if ($(el).hasClass('birthday')) {
+            var birthday_error = false, error_message = [];
+            $(el).find('select').each(function() {
+              if (!$(this).val()) {
+                birthday_error = true;
+                error_message.push($(this).data('error-message'));
+              }
+            });
+            if (birthday_error) {
+              error.html(error_message.join('<br>')).show();
+              has_error = true;
+            }
+          } else if (value=='') {
+            error.text(input.data('error-message')).show();
+            has_error = true;
+          }
+        }
+      });
+      if (form.find('input[name=f_disclaimer]').length && !form.find('input[name=f_disclaimer]').is(':checked')) {
+        form.find('.disclaimer.error').text(form.find('input[name=f_disclaimer]').data('error-message')).show();
+        has_error = true;
+      }
+      return !has_error;
+    }
+    function isLoginFormValid(form) {
+      var error = false;
+      form.find('.formError, .error').text('').hide();
+      form.find('.form-group').each(function(i, el) {
+        if ($(el).find('input').val()=='') {
+          $(el).find('.error').text( $(el).find('input').data('error-message') ).show();
+          error = true;
+        }
+        $(el).find('input').val($(el).find('input').val().toLowerCase());
+      });
+      return !error;
+    }
+  </script>
+
+<script>
+  if ("OTPCredential" in window) {
+    window.addEventListener("DOMContentLoaded", (e) => {
+      const input = document.querySelector('input[id="f_pass_id"]');
+       if (!input) return;
+        // Set up an AbortController to use with the OTP request
+       const ac = new AbortController();
+       const form = input.closest("form");
+       const signInButton = document.querySelectorAll(".otp-sign-in");
+      if (form) {
+        // Abort the OTP request if the user attempts to submit the form manually
+        form.addEventListener("submit", (e) => {
+          ac.abort();
+        });
+      }
+      // Request the OTP via get()
+      navigator.credentials
+        .get({
+          otp: { transport: ["sms"] },
+          signal: ac.signal,
+        })
+        .then((otp) => {
+          // When the OTP is received by the app client, enter it into the form
+          // input and submit the form automatically
+          input.value = otp.code;
+          // for (let i = 0; i < signInButton.length; i++) {
+          //     signInButton[i].click();
+          // }
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    });
+  }
+</script>
+
+</body>
+</html>
