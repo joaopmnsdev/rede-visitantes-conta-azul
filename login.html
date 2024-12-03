@@ -1,208 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="Cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
-  
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/splash_template.css" rel="stylesheet">
-  
-  <title>Login to WiFi</title>
+
+  <!-- Estilos externos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: Arial, sans-serif;
+      margin: 5%;
+      margin-top: 10%;
+    }
+
+    .form-container {
+      max-width: 40%;
+      margin: 40px auto;
+      padding: 30px;
+      background: #ffffff;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .form-header {
+      background: #1982E3;
+      padding: 20px;
+      text-align: center;
+      border-radius: 15px 15px 0 0;
+      margin-bottom: 20px;
+    }
+
+    .form-header h1 {
+      color: #ffffff;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .btn-primary {
+      background: #1982E3;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #166bb1;
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .form-footer a {
+      color: #1982E3;
+      text-decoration: none;
+    }
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <title>Login Wi-Fi</title>
 </head>
-          
-    
-                            <body style='background:#FFFFFFFF none no-repeat center center scroll;' data-sj=''>
-    <!-- splash content -->
-    <!-- landing page content -->
-                                                                                                  <div class="container" id="landing" data-body-style="background:#FFFFFFFF none no-repeat center center scroll;" style="display:none">
-                              <div class="section rowBlock" style="min-height: 80px; background: rgb(25, 130, 227); float: left;">
-                            
-                  
-        <div class="col_one ">
-                                  <div class="sw_height " style="min-height:80px;">
-            <div style="text-align: center; padding: 20px 0px;"><font style="background-color: #1982E3;line-height:32px;" color="#ffffff" size="6">BEM VINDO A CONTA AZUL!​</font></div>
-          </div>
-                    </div>
-        </div>
- 
-                                  <div class="section rowBlock" style="min-height: 350px; background: transparent; float: left;">
-                            
-                  
-        <div class="col_one ">
-                                          <div class="form_id">
-          <form class='registrationForm' action="/guest/register/register_user" method="POST">
-                      <header><h1>Registre-se para o WIFI</h1></header>
-            <div class="guRegBasic">
-              <div class='formError form-group' style='display:none;'><div></div></div>
-                                              <input type="hidden" name="f_mobilecheck" value="on">
-                                              
-                                                                  <div class='form-group'>
-                    <label for='f_name_id' class='upper-case'>NOME<span class='redstar'></span></label>
-                    <input type='text' class='form-control' name='f_name' id='f_name_id' placeholder='Nome Completo' data-required='false' data-error-message=''>
-                    <div class='error' style='display: none;'></div>
-                  </div>
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                                  
-                  
-                                      <div class='form-group'>
-                      <label for='mobile_number_id' class='upper-case mobile'>TELEFONE<span class='redstar'>*</span></label>
-                      <input type='mobile' class='form-control' name='f_mobile' id='mobile_number_id' placeholder='Insira o código 55 Ex: 5547999999999' data-required='true' data-error-message='Telefone inválido'>
-                      <div class='error' style='display: none;'></div>
-                    </div>
-                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                    <div class='form-check'>
-                      <input class="form-check-input" type="checkbox" name="f_disclaimer" id="f_disclaimer_id" data-required='true' data-error-message='Agreement is required!'>
-                      <label class="form-check-label" for="f_disclaimer_id">Ao clicar em Registrar, você concorda com os termos deste Termo de Responsabilidade</label>
-                      <div class='disclaimer error' id='f_disclaimer_error' style='display: none;'></div>
-                    </div>
-                                                                              
-                                                
-                                
-                                                                                              
-            </div>
-            <div class='formError formSubmitStatus' style='display:none;'></div>
-                        <div class="form-row">
-              <div class="col"><a class='btn btn-primary submit' href='#' role='button'>Registrar</a></div>
-            </div>
-            <div class="form-row">
-              <div class="col"><input class='btn' type='reset' value="Clear"/></div>
-              <div class="col"><a class='btn btn-primary logButton' href='#' role='button'>Fazer Login</a></div>
-            </div>
-                                </form>
-        </div>
- 
-                    </div>
-        </div>
- 
-                                      </div>
-                                                                                                  <div class="container" id="login" data-body-style="background:#FFFFFFFF none no-repeat center center scroll;" >
-                              <div class="section rowBlock" style="min-height: 80px; background: rgb(25, 130, 227); float: left;">
-                            
-                  
-        <div class="col_one ">
-                                  <div class="sw_height " style="min-height:80px;">
-            <div style="text-align: center; padding: 20px 0px;"><font style="background-color: #1982E3;line-height:32px;" color="#ffffff" size="6">Conta Azul</font></div>
-          </div>
-                    </div>
-        </div>
- 
-                                  <div class="section rowBlock" style="min-height: 297px; background: transparent; float: left;">
-                            
-                  
-        <div class="col_one ">
-                                          <form class='loginForm' action="/cgi-bin/hslogin.cgi" method="POST">
-          <header><h3>Login</h3></header>
-          <div class='form_main'>
-            <div class="form-group">
-              <div class='formError form_right' style='display:none;'></div>
-            </div>
-            <div class="form-group">
-              <label for='f_user_id' class='upper-case'>Email<span class='redstar'>*</span></label>
-              <input type="text" class="form-control" name="f_user" id="f_user_id" placeholder="Senha" data-required='true' data-error-message='Please provide the Username'>
-              <div class='error' style='display: none;'></div>
-            </div>
-            <div class="form-group">
-              <label for="f_pass_id" class='upper-case'>Código SMS<span class='redstar'>*</span></label>
-              <input type="text" autocomplete="one-time-code" class="form-control" name="f_pass" id="f_pass_id" placeholder="Adicionar SMS" data-required='true' data-error-message='Please provide the passcode'>
-              <div class='error' style='display: none;'></div>
-            </div>
-                                      <div class="form-row">
-              <div class="col"><input class='btn btn-primary' type='reset' value="Clear"/></div>
-              <!-- <div class="col"><input class='btn btn-primary' type='submit' value='Sign In'/></div> -->
-              <div class="col"><a class='btn btn-primary submit' href='#' role='button' class="otp-sign-in">Sign In</a></div>
-            </div>
-            <div class="form-row">
-              <div class="col"><a class='btn btn-primary forgot' href='#' role='button'>Forgot Passcode</a></div>
-              <div class="col"><a class='btn btn-primary regButton' href='#' role='button'>Register Now</a></div>
-            </div>
-                                    </div>
-        </form>
-       
- 
-                    </div>
-        </div>
- 
-                                  <div class="section rowBlock" style="min-height: 32px; background: transparent; float: left;">
-                            
-                  
-        <div class="col_one ">
-                                          <div class="sw_height " style="height:32px;white-space: nowrap;text-align: center">
-                        <span class="img_ver_main" style="vertical-align:middle"></span>
-            <span class="terms_text_user tnc-link" data-toggle="modal" data-target="#tsModal" style="color:#000000;font-size:13">Termos e Condições</span>
-                        <span class="separator_user" style="padding:5px;">|</span>
-            <span class="terms_text_user pp-link" data-toggle="modal" data-target="#ppModal"  style="color:#000000;font-size:13">Política de Privacidade</span>
-                    </div>
-                    </div>
-        </div>
- 
-                                      </div>
-                      <!-- landing page content end -->
-            <!-- Terms of service Modal -->
-      <div class="modal fade" id="tsModal" tabindex="-1" role="dialog" aria-labelledby="tsModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="tsModalLabel">Termos e Condições</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id='terms-of-service'>
-                  <span id="docs-internal-guid-ab2e671b-7fff-4e47-dcb5-86ded66235b6"><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size: 11pt; font-family: Arial, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">Você é responsável por manter a confidencialidade da senha e de todas as atividades que ocorrem sob seu nome de usuário e senha. A Conta Azul oferece o acesso a internet para atividades como uso ativo de e-mail, mensagens instantâneas, navegação na World Wide Web e acesso a intranets corporativas. Não são permitidas transferências de dados de grandes volumes, especialmente transferências sustentadas de dados de grandes volumes. É proibido hospedar um servidor web ou qualquer outro servidor usando nosso serviço. Tentar acessar a conta de outra pessoa, enviar e-mails em massa não solicitados, coletar dados pessoais de outras pessoas sem o seu conhecimento e interferir com outros usuários da rede são todos proibidos. A Conta Azul se reserva o direito de suspender o serviço se tiver razões para acreditar que seu uso do serviço é injustificadamente excessivo ou serve à atividades criminosas ou ilegais. Você não tem o direito de revender este serviço a terceiros. A Conta Azul se reserva o direito de rever, corrigir ou modificar os Termos e Condições, outras políticas e acordos e aspectos do próprio serviço. O aviso de qualquer revisão, correção ou modificação será publicado no site da Conta Azul e entrará em vigor para os usuários 30 dias após a publicação.</span></p><br><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="background-color: transparent; font-family: Arial, sans-serif; font-size: 11pt; white-space-collapse: preserve;">Seja bem vindo a Conta Azul</span><br></p><div><span style="font-size: 11pt; font-family: Arial, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;"><br></span></div></span>
-                </div>
-              </div>
-          </div>
-      </div>
-              <!-- Privacy Policy Modal -->
-      <div class="modal fade" id="ppModal" tabindex="-1" role="dialog" aria-labelledby="ppModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="ppModalLabel">Política de Privacidade</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id='privacy-policy'>
-                  <div style=""><div style=""><font face="Arial, sans-serif"><span style="font-size: 14.6667px; white-space-collapse: preserve;">Essa rede wireless é fornecida para uso exclusivo de visitantes à Conta Azul. Ao acessar esta rede, podemos coletar informações como seu endereço IP, nome de usuário e e-mail para fornecer acesso à rede e monitorar seu uso. Suas informações não serão compartilhadas com terceiros sem o seu consentimento. Implementamos medidas de segurança para proteger suas informações contra acesso não autorizado.</span></font></div><div style=""><font face="Arial, sans-serif"><span style="font-size: 14.6667px; white-space-collapse: preserve;"><br></span></font></div><div style=""><font face="Arial, sans-serif"><span style="font-size: 14.6667px; white-space-collapse: preserve;">Para fins de cumprimento com a legislação de proteção de dados pessoais, mediante o acesso a redes sem fio, formaliza-se o consentimento para coleta de dados pessoais. Esses dados serão desativados assim que expirar o período de visita e poderão ser excluídos por meio de solicitação do colaborador.</span></font></div><div style="color: rgb(0, 0, 0); font-family: NotoSans, sans-serif; font-size: 13px;"><br></div><div style="font-size: 13px; font-family: NotoSans, sans-serif; color: rgb(0, 0, 0);"><span id="docs-internal-guid-d77169dc-7fff-6aaa-1935-d3b4fa8d3191"><span style="font-size: 11pt; font-family: Arial, sans-serif; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; vertical-align: baseline; white-space-collapse: preserve;">Seja bem vindo a Conta Azul</span></span><br></div></div>
-                </div>
-              </div>
-          </div>
+<body>
+
+  <!-- Formulário de Login -->
+  <div class="form-container">
+    <div class="form-header">
+      <h1>Entrar no WiFi</h1>
+    </div>
+    <form action="/cgi-bin/hslogin.cgi" method="POST">
+      <!-- Campo de Usuário -->
+      <div class="mb-3">
+        <label for="f_user_id" class="form-label">Usuário</label>
+        <input type="text" class="form-control" id="f_user_id" name="f_user" placeholder="Insira seu telefone" required>
       </div>
 
-  <script src= "js/jquery.min.js"></script>
-  <script src= "js/bootstrap.bundle.min.js"></script>
-  <script src= "js/eg.min.js"></script>
+      <!-- Campo de Senha -->
+      <div class="mb-3">
+        <label for="f_pass_id" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="f_pass_id" name="f_pass" placeholder="Insira sua senha" required>
+      </div>
+
+      <!-- Botão de Login -->
+      <button type="submit" class="btn btn-primary w-100">Entrar</button>
+
+      <!-- Links de Recuperação e Registro -->
+      <div class="form-footer">
+        <a href="registration.html">Registrar</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal: Termos e Condições -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="termsModalLabel">Termos e Condições</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Você é responsável por manter a confidencialidade da senha e de todas as atividades...</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/eg.min.js"></script>
   <script src="script/login.js"></script>
-
+  
 </body>
 </html>
