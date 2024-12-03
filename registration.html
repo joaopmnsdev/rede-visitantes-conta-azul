@@ -5,113 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="Cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
-  
+
+  <!-- Estilos externos -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/splash_template.css" rel="stylesheet">
-  
+
   <title>Login to WiFi</title>
 </head>
-          
-    
-                            <body style='background:#FFFFFFFF none no-repeat center center scroll;' data-sj=''>
-    <!-- splash content -->
-    <!-- landing page content -->
-                                                                                                  <div class="container" id="landing" data-body-style="background:#FFFFFFFF none no-repeat center center scroll;" >
-                              <div class="section rowBlock" style="min-height: 80px; background: rgb(25, 130, 227); float: left;">
-                            
-                  
-        <div class="col_one ">
-                                  <div class="sw_height " style="min-height:80px;">
-            <div style="text-align: center; padding: 20px 0px;"><font style="background-color: #1982E3;line-height:32px;" color="#ffffff" size="6">BEM VINDO A CONTA AZUL!​</font></div>
+<body style="background:#FFFFFFFF none no-repeat center center scroll;" data-sj="">
+  <!-- Conteúdo principal -->
+  <div class="container" id="landing" data-body-style="background:#FFFFFFFF none no-repeat center center scroll;">
+    <!-- Cabeçalho -->
+    <div class="section rowBlock" style="min-height: 80px; background: rgb(25, 130, 227); float: left;">
+      <div class="col_one">
+        <div class="sw_height" style="min-height:80px;">
+          <div style="text-align: center; padding: 20px 0px;">
+            <font style="background-color: #1982E3; line-height:32px;" color="#ffffff" size="6">
+              BEM VINDO A CONTA AZUL!
+            </font>
           </div>
-                    </div>
         </div>
- 
-                                  <div class="section rowBlock" style="min-height: 350px; background: transparent; float: left;">
-                            
-                  
-        <div class="col_one ">
-                                          <div class="form_id">
-          <form class='registrationForm' action="/guest/register/register_user" method="POST">
-                      <header><h1>Registre-se para o WIFI</h1></header>
+      </div>
+    </div>
+
+    <!-- Formulário -->
+    <div class="section rowBlock" style="min-height: 350px; background: transparent; float: left;">
+      <div class="col_one">
+        <div class="form_id">
+          <form class="registrationForm" action="/guest/register/register_user" method="POST">
+            <header>
+              <h1>Registre-se para ter acesso ao WIFI</h1>
+            </header>
             <div class="guRegBasic">
-              <div class='formError form-group' style='display:none;'><div></div></div>
-                                              <input type="hidden" name="f_mobilecheck" value="on">
-                                              
-                                                                  <div class='form-group'>
-                    <label for='f_name_id' class='upper-case'>NOME<span class='redstar'></span></label>
-                    <input type='text' class='form-control' name='f_name' id='f_name_id' placeholder='Nome Completo' data-required='false' data-error-message=''>
-                    <div class='error' style='display: none;'></div>
-                  </div>
-                                                
-                                
+              <div class="formError form-group" style="display:none;">
+                <div></div>
+              </div>
+
+              <!-- Campo oculto -->
+              <input type="hidden" name="f_mobilecheck" value="on">
+
+              <!-- Campo de Nome -->
+              <div class="form-group">
+                <label for="f_name_id" class="upper-case">NOME<span class="redstar"></span></label>
+                <input type="text" class="form-control" name="f_name" id="f_name_id" placeholder="Nome Completo" data-required="false" data-error-message="">
+                <div class="error" style="display: none;"></div>
+              </div>
+
+              <!-- Campo de Telefone -->
+              <div class="form-group">
+                <label for="mobile_number_id" class="upper-case mobile">TELEFONE<span class="redstar">*</span></label>
+                <input type="mobile" class="form-control" name="f_mobile" id="mobile_number_id" placeholder="Insira o código 55 Ex: 5547999999999" data-required="true" data-error-message="Telefone inválido">
+                <div class="error" style="display: none;"></div>
+              </div>
+           
+          
+      <script>
+        function add55(elem) {
+         var val = elem.value;
+          if (!val.match(/^55/)) {
+             elem.value = "55" + val;
+          }
+       }
+      </script>   
                                                                                               
-                                                
-                                
-                                                                                              
-                                                                  
-                  
-                                      <div class='form-group'>
-                      <label for='mobile_number_id' class='upper-case mobile'>TELEFONE<span class='redstar'>*</span></label>
-                      <input type='mobile' class='form-control' name='f_mobile' id='mobile_number_id' placeholder='Insira o código 55 Ex: 5547999999999' data-required='true' data-error-message='Telefone inválido'>
-                      <div class='error' style='display: none;'></div>
-                    </div>
-                
-                    <script>
-                      function add55(elem) {
-                          var val = elem.value;
-                          if (!val.match(/^55/)) {
-                              elem.value = "55" + val;
-                          }
-                      }
-                    </script>   
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                                                              
-                                                
-                                
-                                                    <div class='form-check'>
-                      <input class="form-check-input" type="checkbox" name="f_disclaimer" id="f_disclaimer_id" data-required='true' data-error-message='Agreement is required!'>
-                      <label class="form-check-label" for="f_disclaimer_id">Ao clicar em Registrar, você concorda com os termos deste Termo de Responsabilidade</label>
+                         
+      <div class='form-check'>
+                      <input class="form-check-input" type="checkbox" name="f_disclaimer" id="f_disclaimer_id" data-required='true' data-error-message='É necessário concordar com os termos.'>
+                      <label class="form-check-label" for="f_disclaimer_id" id="check">Ao clicar em Registrar, você concorda com os termos deste Termo de Responsabilidade</label>
                       <div class='disclaimer error' id='f_disclaimer_error' style='display: none;'></div>
-                    </div>
-                                                                              
-                                                
-                                
-                                                                                              
-            </div>
-            <div class='formError formSubmitStatus' style='display:none;'></div>
-                        <div class="form-row">
+      </div>
+                                                                                                                                                             
+      </div>
+          <div class='formError formSubmitStatus' style='display:none;'></div>
+          <div class="form-row">
               <div class="col"><a class='btn btn-primary submit' href='#' role='button'>Registrar</a></div>
-            </div>
-            <div class="form-row">
-              <div class="col"><input class='btn' type='reset' value="Clear"/></div>
-              <div class="col"><a class='btn btn-primary logButton' href='#' role='button'>Fazer Login</a></div>
-            </div>
-                                </form>
+              <div class="col"><a class='btn btn-primary submit' href='#' role='button'>Login</a></div>
+          </div>
+          <div class="form-row">
+          </div>
+      </form>
+
+
         </div>
- 
-                    </div>
         </div>
- 
-                                      </div>
-                                                                                                  <div class="container" id="login" data-body-style="background:#FFFFFFFF none no-repeat center center scroll;" style="display:none">
+        </div>
+        </div>
+
+        <div class="container" id="login" data-body-style="background:#FFFFFFFF none no-repeat center center scroll;" style="display:none">
                               <div class="section rowBlock" style="min-height: 80px; background: rgb(25, 130, 227); float: left;">
                             
                   
@@ -142,8 +122,7 @@
               <input type="text" autocomplete="one-time-code" class="form-control" name="f_pass" id="f_pass_id" placeholder="Adicionar SMS" data-required='true' data-error-message='Please provide the passcode'>
               <div class='error' style='display: none;'></div>
             </div>
-                                      <div class="form-row">
-              <div class="col"><input class='btn btn-primary' type='reset' value="Clear"/></div>
+                                      
               <!-- <div class="col"><input class='btn btn-primary' type='submit' value='Sign In'/></div> -->
               <div class="col"><a class='btn btn-primary submit' href='#' role='button' class="otp-sign-in">Sign In</a></div>
             </div>
@@ -403,9 +382,9 @@
           }, 500);          
         } else {
           if(data.success) {
-            form.find('.formError, .formSubmitStatus').text(data.message || 'Successfully registered!').show();
+            form.find('.formError, .formSubmitStatus').text(data.message || 'Você foi registrado!').show();
           } else {
-            form.find('.formError, .formSubmitStatus').text(data.message || 'Registration failed. Please contact administrator.').show();
+            form.find('.formError, .formSubmitStatus').text(data.message || 'O registro falhou. Por favor contate o suporte!').show();
           }
         }
       }).fail(function (data) {
@@ -522,7 +501,7 @@
           } else if (input.attr('type')=='mobile') {
             var MOBILE_REGEXP = /^([0-9]{13})$/;
             if (!MOBILE_REGEXP.test(value)) {
-                error.text("Favor inserir no formato: 5547999999999").show();
+                error.text("Favor inserir no formato: 55xxxxxxxxxx").show();
                 has_error = true;
             }
           } else if ($(el).hasClass('birthday')) {

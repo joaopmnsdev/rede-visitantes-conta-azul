@@ -1,38 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="Cache-control" content="no-cache">
-  <meta http-equiv="expires" content="0">
-  
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/splash_template.css" rel="stylesheet">
-  
-  <title>Login to WiFi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Sucesso!</title>
+  <style>
+    .success-container {
+      background: rgb(25, 130, 227);
+      color: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .drop-panel {
+      background: #f8f9fa;
+      border-radius: 15px;
+      padding: 20px;
+      height: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-home {
+      margin-top: 20px;
+      background-color: rgb(25, 130, 227);
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-home:hover {
+      background-color: #1974c3;
+    }
+  </style>
 </head>
-                    <body style='background:#FFFFFFFF none no-repeat center center scroll;' data-sj=''>
-    <!-- splash content -->
-    <div class="container" >
-                  <div class="section rowBlock" style="min-height: 80px; background: rgb(25, 130, 227); float: left;">
-                            
-                  
-        <div class="col_one ">
-                                  <div class="sw_height " style="min-height:80px;">
-            <div style="text-align: center; padding: 20px 0px;"><font style="background-color: rgb(25, 130, 227); line-height: 32px;" color="#ffffff" size="6" face="arial">Sucesso! Agora você tem 7 dias de acesso à internet!</font></div>
-          </div>
-                    </div>
+<body>
+
+<div class="container mt-5">
+
+  <!-- Seção 1: Mensagem de sucesso -->
+  <div class="row">
+    <div class="col">
+      <div class="success-container">
+        <h2>Sucesso!</h2>
+        <p>Agora você tem 7 dias de acesso à internet. Aproveite!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seção 2: Espaço adicional ou navegação -->
+  <div class="row mt-4">
+    <div class="col">
+      <div class="drop-panel">
+        <div>
+          <h4 class="text-secondary">Em casos de dúvidas entre em contato com suporte de TI</h4>
+        
         </div>
- 
-                      <div class="section rowBlock" style="min-height: 440px; background: transparent; float: left;">
-                            
-                  
-        <div class="col_one ">
-                                  <div class="drop_panel" style="height:440px;"></div>
-                    </div>
-        </div>
- 
-                  </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
       <!-- landing page content -->
                       <!-- landing page content end -->
       <script src= "js/jquery.min.js"></script>
