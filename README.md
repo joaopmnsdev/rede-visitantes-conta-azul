@@ -26,10 +26,12 @@ Projeto desenvolvido para adaptar a solução Wi-Fi visitantes para a Conta Azul
 git clone https://github.com/joaopmnsdev/rede-visitantes-conta-azul.git
 
 # entrar na pasta do projeto
-cd visitantes
+cd redes-visitantes-conta-azul
 
 # executar o projeto
 abrir o arquivo landing.html no navegador
+open landing.html
+
 ```
 
 # Autor
