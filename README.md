@@ -23,7 +23,7 @@ Projeto desenvolvido para adaptar a solução Wi-Fi visitantes para a Conta Azul
 # Como executar o projeto
 ```bash
 # clonar repositório
-git@github.com:joaopmnsdev/rede-visitantes-conta-azul.git
+git clone https://github.com/joaopmnsdev/rede-visitantes-conta-azul.git
 
 # entrar na pasta do projeto
 cd visitantes
