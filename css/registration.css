@@ -75,3 +75,29 @@ body {
     margin-top: 2%;
     float: left;
   }
+
+  /* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .form-container {
+      max-width: 90%;
+      padding: 20px;
+  }
+
+  .form-header h1 {
+      font-size: 20px;
+  }
+
+  .form-row {
+      flex-direction: column; /* Coloca as colunas em uma única coluna */
+  }
+
+  .col-3, .col {
+      width: 100%; /* Cada coluna ocupa 100% da largura */
+      margin-bottom: 10px; /* Espaço entre os elementos */
+  }
+
+  #termo {
+      float: none; /* Remove o float */
+      text-align: center; /* Centraliza o conteúdo */
+  }
+}

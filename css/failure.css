@@ -27,7 +27,7 @@ body {
 }
 
 .error-container h1 {
-    color: #3200e6;
+    color: #6338ff;
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -40,7 +40,7 @@ body {
 }
 
 .error-container button {
-    background:#3200e6;
+    background:#4174ff;
     color: white;
     border: none;
     padding: 10px 20px;

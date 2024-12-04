@@ -1,60 +1,59 @@
 body {
-  
-    font-family: Arial, sans-serif;
-    margin: 5%;
-    margin-top: 10%;
-  }
+  font-family: Arial, sans-serif;
+  margin: 5%;
+  margin-top: 10%;
+}
 
-  .form-container {
-    max-width: 40%;
-    margin: 40px auto;
-    padding: 30px;
-    background: #ffffff;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    
-  }
+.form-container {
+  max-width: 40%;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
 
-  .form-header {
-    background: #1982E3;
-    padding: 20px;
-    text-align: center;
-    border-radius: 15px 15px 15px 15px;
-    margin-bottom: 20px;
-  }
+.form-header {
+  background: #1982E3;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px 15px 15px 15px;
+  margin-bottom: 20px;
+}
 
-  .form-header h1 {
-    color: #ffffff;
-    font-size: 24px;
-    margin: 0;
-  }
+.form-header h1 {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0;
+}
 
-  .btn-primary {
-    background: #1982E3;
-    border: none;
-  }
+.btn-primary {
+  background: #1982E3;
+  border: none;
+}
 
-  .btn-primary:hover {
-    background: #166bb1;
-  }
+.btn-primary:hover {
+  background: #166bb1;
+}
 
-  .form-footer {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 14px;
-  }
+.form-footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
 
-  .form-footer a {
-    color: #1982E3;
-    text-decoration: none;
-  }
+.form-footer a {
+  color: #1982E3;
+  text-decoration: none;
+}
 
-  .form-footer a:hover {
-    text-decoration: underline;
-  }
+.form-footer a:hover {
+  text-decoration: underline;
+}
 
-.form-row{
+.form-row {
   display: flex;
+  flex-wrap: wrap; /* Permite que as colunas se ajustem automaticamente */
 }
 
 .col-3 {
@@ -66,13 +65,39 @@ body {
   width: 30%; /* Ajuste conforme necessário */
 }
 
-#separador{
+#separador {
   width: 1px;
   height: auto; /* Deixe a altura automática ou defina conforme necessário */
 
 }
 
-#termo{
+#termo {
   margin-top: 2%;
   float: left;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .form-container {
+      max-width: 90%;
+      padding: 20px;
+  }
+
+  .form-header h1 {
+      font-size: 20px;
+  }
+
+  .form-row {
+      flex-direction: column; /* Coloca as colunas em uma única coluna */
+  }
+
+  .col-3, .col {
+      width: 100%; /* Cada coluna ocupa 100% da largura */
+      margin-bottom: 10px; /* Espaço entre os elementos */
+  }
+
+  #termo {
+      float: none; /* Remove o float */
+      text-align: ; /* Centraliza o conteúdo */
+  }
 }
